@@ -49,9 +49,9 @@ Lastly, we will perform clustering on the data by using **k-means clustering**. 
 
 The results from the k-means clustering show that we can categorize the neighbourhoods into 3 clusters based on the frequency of occurrence for ```Shopping Mall```:
 
-- Cluster 0: Neighbourhoods with high number of shopping centers.
-- Cluster 1: Neighbourhoods with low number of shopping centers.
-- Cluster 2: Neighbourhoods with moderate concentration of shopping malls.
+- Cluster 0 (red): Neighbourhoods with high number of shopping centers.
+- Cluster 1 (purple): Neighbourhoods with low number of shopping centers.
+- Cluster 2 (mint Green): Neighbourhoods with moderate concentration of shopping malls.
 
 The results of the clustering are visualized in the map below with cluster 0 in red colour, cluster 1 in purple colour, and cluster 2 in mint green colour.
 
