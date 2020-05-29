@@ -6,7 +6,7 @@
 <h3 align="center"><b>May 2020</b></h3>
 
 
-## Introdution
+## Introduction
 
 Hyderabd is famous for its centuries-old monuments, but the rise of numerous malls in Hyderabad has added a stylish edge to the economic powerhouse. Well-heeled travellers can choose from various swanky malls housing world-renowned fashion labels, global restaurants and cinemas. If you have the budget to back you, then get ready to splurge at these malls during your next visit to Hyderabad.
 
@@ -39,7 +39,7 @@ After that, we will use Foursquare API to get the venue data for those neighbour
 
 ## Methodology
 
-Firstly, we need to get the list of neighbourhoods in the city of Kuala Lumpur. Fortunately, the list is available in the [Wikipedia page](https://en.wikipedia.org/wiki/Category:Neighbourhoods_in_Hyderabad,_India). We will do web scraping using Python requests and ```Beautifulsoup``` packages to extract the list of neighbourhoods data. However, this is just a list of names. We need to get the geographical coordinates in the form of latitude and longitude in order to be able to use ```Foursquare API```. To do so, we will use the wonderful ```Geocoder``` package that will allow us to convert address into geographical coordinates in the form of latitude and longitude. After gathering the data, we will populate the data into a pandas DataFrame and then visualize the neighbourhoods in a map using Folium package. This allows us to perform a sanity check to make sure that the geographical coordinates data returned by Geocoder are correctly plotted in the city of Hyderabad.
+Firstly, we need to get the list of neighbourhoods in the city of Hyderabad. Fortunately, the list is available in the [Wikipedia page](https://en.wikipedia.org/wiki/Category:Neighbourhoods_in_Hyderabad,_India). We will do web scraping using Python requests and ```Beautifulsoup``` packages to extract the list of neighbourhoods data. However, this is just a list of names. We need to get the geographical coordinates in the form of latitude and longitude in order to be able to use ```Foursquare API```. To do so, we will use the wonderful ```Geocoder``` package that will allow us to convert address into geographical coordinates in the form of latitude and longitude. After gathering the data, we will populate the data into a pandas DataFrame and then visualize the neighbourhoods in a map using Folium package. This allows us to perform a sanity check to make sure that the geographical coordinates data returned by Geocoder are correctly plotted in the city of Hyderabad.
 
 Next, we will use ```Foursquare API``` to get the top 100 venues that are within a radius of 2000 meters. We need to register a Foursquare Developer Account in order to obtain the Foursquare ID and Foursquare secret key. We then make API calls to Foursquare passing in the geographical coordinates of the neighbourhoods in a Python loop. Foursquare will return the venue data in JSON format and we will extract the venue name, venue category, venue latitude and longitude. With the data, we can check how many venues were returned for each neighbourhood and examine how many unique categories can be curated from all the returned venues. Then, we will analyse each neighbourhood by grouping the rows by neighbourhood and taking the mean of the frequency of occurrence of each venue category. By doing so, we are also preparing the data for use in clustering. Since we are analysing the _Shopping Center_ data, we will filter the ```Shopping Mall``` as venue category for the neighbourhoods.
 
@@ -49,7 +49,7 @@ Lastly, we will perform clustering on the data by using **k-means clustering**. 
 
 The results from the k-means clustering show that we can categorize the neighbourhoods into 3 clusters based on the frequency of occurrence for ```Shopping Mall```:
 
-- **Cluster 0**: Neighbourhoods with high number of shopping centers.
+- Cluster 0: Neighbourhoods with high number of shopping centers.
 - Cluster 1: Neighbourhoods with low number of shopping centers.
 - Cluster 2: Neighbourhoods with moderate concentration of shopping malls.
 
