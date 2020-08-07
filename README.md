@@ -1,4 +1,4 @@
-<h1 align="center">Coursera Capstone Project</hi>
+<h1 align="center">Coursera Capstone Project</h1>
 <h2 align="center">IBM Applied DataScience Capstone</h2>
 <h3 align="center"><i>Opening a new shopping center in Hyderabad, Telangana</i></h3>
 
